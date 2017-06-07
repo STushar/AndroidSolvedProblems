@@ -1,0 +1,52 @@
+
+<--1. This block is for a radiobutton with its blue circle color customization. -->
+
+<LinearLayout
+                        android:id="@+id/quikrAxisBank"
+                        android:layout_width="match_parent"
+                        android:layout_height="55dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal"
+                        android:paddingLeft="3dp"
+                        android:paddingRight="3dp"
+                        android:background="@drawable/quikrx_bank_border"
+                        android:tag="Axis">
+
+                        <RadioButton
+                            android:id="@+id/quikrXFragmentNetBankingrbAxisBank"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:theme="@style/RadioButtonStyle"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginRight="3dp"
+                            android:layout_marginEnd="3dp"
+                            android:clickable="false"
+                            android:tag="Axis" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="35dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/quikrx_axis_bank_icon"/>
+                    </LinearLayout>
+
+					
+//This is the style
+<style name="RadioButtonStyle" parent="AppTheme">
+        <item name="colorControlNormal">#999999</item>
+        <item name="colorAccent">#007fbf</item>
+</style>
+
+<-- End 1 -->
+
+
+<--2. disable/hide keyboard on activity/dialog start -->
+
+YourClass.this.getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_HIDDEN);
+
+In OnCreateView:
+getDialog().getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_HIDDEN);
+
+<-- End 2 -->
+
+
